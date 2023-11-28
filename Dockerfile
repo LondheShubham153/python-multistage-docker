@@ -1,4 +1,4 @@
-# ------------------- Stage 1: Build Stage ------------------------
+# ------------------- Stage 1: Build Stage ------------------------------
 FROM python:3.9 AS backend-builder
 
 # Set the working directory to /app
@@ -10,7 +10,7 @@ COPY backend/ .
 # Install dependencies specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# ------------------- Stage 2: Final Stage ------------------------
+# ------------------- Stage 2: Final Stage ------------------------------
 
 # Use a slim Python 3.9 image as the final base image
 FROM python:3.9-slim
